@@ -107,11 +107,12 @@ app.use('/register', register);
 app.use('/add', add);
 
 
-
-var server = app.listen(port, function(){
+var server = app.listen(config.port, function(){
   var port = server.address().port;
-  // console.log('Server started at: http://localhost:3000/');
+  if(port == 3000) {
+  console.log('Server started at: http://localhost:3000/');
   console.log('Press Ctrl + c to close connection');
-})
+}
+});
 
-// module.exports = app;
+module.exports = app;

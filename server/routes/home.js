@@ -1,5 +1,5 @@
 var express = require('express');
-var router = require('express').Router();
+var router = express.Router();
 var path = require('path');
 var bourbon = require('node-bourbon');
 var pg = require('pg');

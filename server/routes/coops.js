@@ -1,5 +1,5 @@
 var express=require('express');
-var router=express.Router();
+var router = express.Router();
 var path=require('path');
 var pg=require('pg');
 var connection=require('../db/connection');
