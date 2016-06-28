@@ -108,12 +108,10 @@ app.use('/add', add);
 
 
 
-var server = app.listen(config.port, function(){
+var server = app.listen(port, function(){
   var port = server.address().port;
-  if(port == 3000) {
-  console.log('Server started at: http://localhost:3000/');
+  // console.log('Server started at: http://localhost:3000/');
   console.log('Press Ctrl + c to close connection');
-}
-});
+})
 
-module.exports = app;
+// module.exports = app;
