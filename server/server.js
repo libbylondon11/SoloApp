@@ -1,23 +1,24 @@
-var express=require('express');
-var passport=require('passport');
+var config = require('../config');
+var express = require('express');
+var passport = require('passport');
 var bourbon = require('node-bourbon');
 var sass =require('node-sass');
-var session=require('express-session');
-var bodyParser=require('body-parser');
-var pg=require('pg');
-var localStrategy=require('passport-local').Strategy;
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var pg = require('pg');
+var localStrategy = require('passport-local').Strategy;
 //local//
-var home=require('./routes/home');
-var coops=require('./routes/coops');
-var userPage=require('./routes/userPage');
-var index=require('./routes/index');
-var add=require('./routes/add');
-var register=require('./routes/register');
-var encryption=require('../modules/encryption');
-var connectionString='postgres://localhost:5432/white';
-var connection=require('./db/connection');
+var home = require('./routes/home');
+var coops = require('./routes/coops');
+var userPage = require('./routes/userPage');
+var index = require('./routes/index');
+var add = require('./routes/add');
+var register = require('./routes/register');
+var encryption = require('../modules/encryption');
+var connectionString = 'postgres://localhost:5432/white';
+var connection = require('./db/connection');
 
-var app=express();
+var app = express();
 var port = process.env.PORT || 3000;
 
 connection.initializeUserDB();
@@ -30,7 +31,7 @@ app.use(session({
   secret: 'teal walls',
   resave: true,
   saveUninitialized: false,
-  cookie: {maxAge: 600000, secure: false}
+  cookie: {maxAge: 3600000, secure: false}
 }));
 //initializing passport//
 app.use(passport.initialize());
@@ -106,8 +107,13 @@ app.use('/register', register);
 app.use('/add', add);
 
 
-var server=app.listen(3000, function(){
-  var port=server.address().port;
-  console.log('listening on port', port);
 
-})
+var server = app.listen(config.port, function(){
+  var port = server.address().port;
+  if(port == 3000) {
+  console.log('Server started at: http://localhost:3000/');
+  console.log('Press Ctrl + c to close connection');
+}
+});
+
+module.exports = app;

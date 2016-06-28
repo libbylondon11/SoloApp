@@ -1,8 +1,8 @@
-var express=require('express');
-var router=express.Router();
-var path=require('path');
+var express = require('express');
+var router = express.Router();
+var path = require('path');
 var bourbon = require('node-bourbon');
-var pg=require('pg');
+var pg = require('pg');
 var connectionString='postgres://localhost:5432/white';
 
 var userId='';
