@@ -84,7 +84,7 @@ passport.deserializeUser(function(user_id, passportDone){
       console.log(err);
     }
     var user={};
-    var query=client.query('SELECT * FROM users where user_id=$1', [user_id]);
+    var query=client.query('SELECT * FROM users where user_id = $1', [user_id]);
 
     query.on('row', function(row){
       user=row;

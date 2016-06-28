@@ -1,20 +1,23 @@
-var pg=require('pg');
+var pg = require('pg');
 
 var connectionString;
 
-if(process.env.DATABASE_URL) {
+if (process.env.DATABASE_URL) {
   pg.defaults.ssl = true;
+  console.log('environment var');
   connectionString = process.env.DATABASE_URL;
-}else{
-  connectionString='postgres://localhost:5432/white';
+} else {
+  console.log('local var');
+  connectionString = 'postgres://localhost:5432/white';
 }
+
 function initializeDB(){
   pg.connect(connectionString, function(err, client, done){
     if(err){
       console.log('error connecting to DB!', err);
       process.exit(1);
-    }else{
-      var query=client.query('CREATE TABLE IF NOT EXISTS coops (coop_id serial PRIMARY KEY, coop_name varchar(80) NOT NULL)');
+    } else {
+      var query = client.query('CREATE TABLE IF NOT EXISTS coops (coop_id serial PRIMARY KEY, coop_name varchar(80) NOT NULL)');
 
       query.on('end', function(){
         console.log('successfully created schema');
@@ -34,8 +37,8 @@ function initializeUserDB(){
     if(err){
       console.log('error connecting to DB!', err);
       process.exit(1);
-    }else{
-      var query=client.query('CREATE TABLE IF NOT EXISTS users (user_id serial PRIMARY KEY, user_name varchar(80) NOT NULL)');
+    } else {
+      var query = client.query('CREATE TABLE IF NOT EXISTS users (user_id serial PRIMARY KEY, user_name varchar(80) NOT NULL)');
 
       query.on('end', function(){
         console.log('successfully created users schema');
@@ -49,5 +52,5 @@ function initializeUserDB(){
     }
   });
 }
-module.exports.connectionString=connectionString;
-module.exports.initializeUserDB=initializeUserDB;
+module.exports.connectionString = connectionString;
+module.exports.initializeUserDB = initializeUserDB;
