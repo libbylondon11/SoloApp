@@ -16,12 +16,12 @@ var index = require('./routes/index');
 var add = require('./routes/add');
 var register = require('./routes/register');
 var encryption = require('../modules/encryption');
-var connectionString = 'postgres://localhost:5432/white';
+// var connectionString = 'postgres://localhost:5432/white';
+//database//
+var connection = require('./db/connection');
 
 var app = express();
 var port = process.env.PORT || 3000;
-//database//
-var connection = require('./db/connection');
 
 connection.initializeUserDB();
 
@@ -45,7 +45,7 @@ passport.use('local', new localStrategy({
 },
 function(request, username, password, done){
   console.log('CHECKING PASSWORD');
-  pg.connect(connectionString, function(err, client){
+  pg.connect(connection.connectionString, function(err, client){
     var user={};
     var query=client.query('SELECT * FROM "users" WHERE "username" = $1', [username]);
     if(err){
