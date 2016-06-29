@@ -1,5 +1,5 @@
 // var http = require("http");
-var config = require('../config');
+// var config = require('../config');
 var express = require('express');
 var passport = require('passport');
 var bourbon = require('node-bourbon');
@@ -108,12 +108,9 @@ app.use('/register', register);
 app.use('/add', add);
 
 
-var server = app.listen(config.port, function(){
+var server = app.listen(port, function(){
   var port = server.address().port;
-  if(port == 3000) {
-  console.log('Server started at: http://localhost:3000/');
-  console.log('Press Ctrl + c to close connection');
-}
-});
+  console.log('Listening on port', port, 'Press Ctrl + c to close connection');
+})
 
-module.exports = app;
+// module.exports = app;

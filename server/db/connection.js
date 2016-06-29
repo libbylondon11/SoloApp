@@ -2,6 +2,7 @@ var pg = require('pg');
 
 var connectionString;
 
+
 if (process.env.DATABASE_URL) {
   pg.defaults.ssl = true;
   console.log('environment var');
