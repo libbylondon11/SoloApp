@@ -12,7 +12,7 @@ var publicAPI={
   },
   comparePassword: function(candidatePassword, storedPassword){
     console.log('comparing', candidatePassword, 'to', storedPassword);
-    var answer=bcrypt.compareSync(candidatePassword, storedPassword);
+    var answer = bcrypt.compareSync(candidatePassword, storedPassword);
     console.log('the answer is', answer);
     return answer;
   }

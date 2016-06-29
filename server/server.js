@@ -17,10 +17,11 @@ var add = require('./routes/add');
 var register = require('./routes/register');
 var encryption = require('../modules/encryption');
 var connectionString = 'postgres://localhost:5432/white';
-var connection = require('./db/connection');
 
 var app = express();
 var port = process.env.PORT || 3000;
+//database//
+var connection = require('./db/connection');
 
 connection.initializeUserDB();
 
@@ -46,7 +47,7 @@ function(request, username, password, done){
   console.log('CHECKING PASSWORD');
   pg.connect(connectionString, function(err, client){
     var user={};
-    var query=client.query("SELECT * FROM users WHERE username = $1", [username]);
+    var query=client.query('SELECT * FROM "users" WHERE "username" = $1', [username]);
     if(err){
       console.log(err);
     }
@@ -58,7 +59,7 @@ function(request, username, password, done){
       if(encryption.comparePassword(password, user.password)){
         console.log('a user has been found');
         done(err, user);
-      }else{
+      } else {
         console.log('no matches found');
         done(null, false);
       }

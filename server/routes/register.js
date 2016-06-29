@@ -21,7 +21,7 @@ router.post('/', function(request, response, next){
     password: encryption.encryptPassword(request.body.password)//use this instead of above for encryption
   }
   console.log('Creating user with these values:', user);
-  var query=client.query('INSERT INTO users (username, password) VALUES ($1, $2)', [user.username, user.password]);
+  var query=client.query('INSERT INTO "users" ("username", "password") VALUES ($1, $2)', [user.username, user.password]);
     query.on('error', function(err){
       console.log(err);
     })
