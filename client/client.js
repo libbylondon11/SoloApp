@@ -1,4 +1,4 @@
-var app = angular.module('whiteApp', ['ngRoute', 'ngMaterial', 'ngRoute']);
+var app = angular.module('whiteApp', ['ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $routeProvider
@@ -40,7 +40,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   $locationProvider.html5Mode(true);
 
 }])
-
+app.controller('RegisterController', function(){
+  this.message = 'register';
+})
 app.controller('LoginController', function(){
   this.message="log in";
 })
@@ -126,6 +128,8 @@ app.controller('UserController', ['UserService', '$http', function(UserService, 
   };
 
 }])
+
+
 app.factory('UserService', ['$http', function($http){
 
   var user={};
