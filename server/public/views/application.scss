@@ -23,7 +23,7 @@ $mobile: new-breakpoint(max-width 490px 4);
 .top {
   font-family: $font;
   color: $primaryColor;
-  font-size: 92px;
+  font-size: 80px;
   text-align: center;
   padding-top: 10px;
 }
@@ -146,21 +146,26 @@ p {
   display: center;
 }
 .signinPage {
-  background: url(WhitePowderBag.png) repeat center center fixed;
+  background: url(WhitePowderBagOp.psd.svg) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  opacity: 0.5%;
   background-size: cover;
   font-family: $font;
   font-color: $primaryColor;
-  background-color: #ead8c3;
+  background-color: rgba(160,152,146,0.3);
+  // background-color: #ead8c3;
+}
+.username {
+  font: 10px;
 }
 body {
   font-family: $font;
   font-color: $primaryColor;
 }
 .container {
-  background: url(talcum-white-large.png) repeat center center fixed;
+  background: url(talcum-white-large.jpg) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -171,6 +176,7 @@ img {
   // padding: 10px;
   // margin: 5px;
   display: center;
+  opacity: 0.5%;
 
 }
 .E {

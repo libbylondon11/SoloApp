@@ -3,7 +3,7 @@ var app = angular.module('whiteApp', ['ngRoute']);
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $routeProvider
   .when('/', {
-    remplateUrl: 'views/homeView.html',
+    templateUrl: 'views/homeView.html',
     controller: 'HomeController',
     controllerAs: 'home'
   })
@@ -41,7 +41,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 }])
 app.controller('RegisterController', function(){
-  this.message = 'register';
+  this.message = "register";
 })
 app.controller('LoginController', function(){
   this.message="log in";

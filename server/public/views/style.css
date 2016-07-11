@@ -11,7 +11,7 @@ html {
 .top {
   font-family: "Timber", sans-sefif;
   color: #661b24;
-  font-size: 92px;
+  font-size: 80px;
   text-align: center;
   padding-top: 10px; }
 
@@ -120,28 +120,33 @@ p {
   display: center; }
 
 .signinPage {
-  background: url(WhitePowderBag.png) repeat center center fixed;
+  background: url(WhitePowderBagOp.psd.svg) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  opacity: 0.5%;
   background-size: cover;
   font-family: "Timber", sans-sefif;
   font-color: #661b24;
-  background-color: #ead8c3; }
+  background-color: rgba(160, 152, 146, 0.3); }
+
+.username {
+  font: 10px; }
 
 body {
   font-family: "Timber", sans-sefif;
   font-color: #661b24; }
 
 .container {
-  background: url(talcum-white-large.png) repeat center center fixed;
+  background: url(talcum-white-large.jpg) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 img {
-  display: center; }
+  display: center;
+  opacity: 0.5%; }
 
 .E {
   font-size: 25px;
