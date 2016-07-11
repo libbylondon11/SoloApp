@@ -2,16 +2,16 @@ module.exports = function(grunt) {
    // Project configuration.
    grunt.initConfig({
        pkg: grunt.file.readJSON('package.json'),
-       uglify: {
-                 my_target:{
-                   files:[{
-                     expand: true,
-                     cwd: 'client',
-                     src: '*.js',
-                     dest: 'server/public/assets/scripts'
-                   }]
-                 }
-              },
+       watch: {
+        scripts: {
+          files: ['client/client.js'],
+          tasks: ['uglify'],
+          options: {
+            spawn: false
+          }
+        }
+      },
+
        uglify: {
            options: {
                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
