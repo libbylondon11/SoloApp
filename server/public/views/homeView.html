@@ -2,47 +2,55 @@
 <html ng-app="whiteApp">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Powders App</title>
-  <script src="vendors/angular/angular.min.js"></script>
-  <script src="vendors/angular-route/angular-route.min.js"></script>
-  <script src="assets/scripts/client.min.js"></script>
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/angular-route/angular-route.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
 
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="views/style.css"/>
-    <!-- <link rel="stylesheet" href="views/application.scss"/> -->
 
     <base href="/"/>
   </head>
-
       <body class="container" ng-controller="HomeController as home">
       <div class="jumbotron">
-        <h1>  Bulk Spice Identifier:
-        A Co-op Bulk Aisle Support App</h1>
-    <h2> Which white spice are you searching for today? Select your co-op below: </h2>
-    </div>
-
+        <h2> Bulk Spice Identifier: A Co-op Bulk Aisle Support App</h2>
+        <p> Which white spice are you searching for today? Select your co-op below: </p>
+        </div>
+  <div class = "container">
   <nav class="navbar navbar-default">
-        <div class="container">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/eastsideView">Eastside Co-op</a>
-              <li>
-              <a href="/sewardView">Seward Friendship Co-op</a>
-              </li>
-              <li>
-              <a href="/wedgeView">Wedge Co-op</a>
-              </li>
-              <li>
-              <a href="/userCupboard">View My Cupboard</a>
-              </li>
-            </ul>
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <button type="button" class ="btn btn-default navbar-btn" href="/">Home</a></button>
+            <button type="button" a class ="btn btn-default navbar-btn"href="/userCupboard">My Cupboard</a></button>
+           <button type="button" a class ="btn btn-default navbar-btn" href="/logout" role = "button"> Log Out</a>
+          <!-- <div class = "col-xs-1">
+            <a class ="btn btn-custom btn-xs" href="/userCupboard" role = "button">My Cupboard</a>
           </div>
-        </nav>
+          <div class = "col-xs-1">
+            <a class ="btn btn-custom btn-xs" href = "/logout" role= "button"> Log Out</a>
+          </div> -->
+        </div>
+      </div>
+  </nav>
+
+
+    <div class="container">
+      <div class = "row">
+          <div class = "col-xs-4">
+            <a class ="btn btn-custom btn-xs" href="/eastsideView" role = "button">Eastside</a>
+          </div>
+          <div class = "col-xs-4">
+            <a class ="btn btn-custom btn-xs" href="/sewardView" role="button">Seward</a>
+          </div>
+          <div class = "col-xs-4">
+            <a class ="btn btn-custom btn-xs" href="/wedgeView" role="button">Wedge</a>
+          </div>
+        </div>
+      </div>
+    </div>
   <div ng-view>
   </div>
-
   </body>
-
   </html>

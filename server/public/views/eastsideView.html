@@ -1,20 +1,39 @@
-<div class="eastsideTitle">
-  <!-- {{eastside.name}}: -->
+<!-- <div class="eastsideTitle">
 <div>
   {{eastside.message}}
-  <!-- {{seward.coopArray}} -->
-    <div class="displayEastside">
+  <!{{seward.coopArray}} -->
+  <!-- <div class="displayEastside">
   <div ng-repeat="item in eastside.coopArray">
     <br>PLU: {{item.product_id_plu}}
-  <br>  Name: {{item.product_name}}
-
+    <br>  Name: {{item.product_name}}
     <div class="button">
     <button ng-click="eastside.addToUserCupboard(item)" class="eastsideClass" >Add to my Cupboard</button>
   </div>
   </div>
 </div>
-  <!-- {{seward.data.product_name}} -->
-  <!-- {{seward.response.data}} -->
 </div>
 </div>
-  </div>
+</div>  -->
+
+<div class="eastsideTitle">
+  <!-- <div class="displayEastside"> -->
+<div ng-repeat="item in eastside.coopArray">
+<table class = "table">
+  <thead>
+    <tr>
+      <th>PLU Number </th>
+      <th> Spice Name </th>
+      <th> Add to your cupboard?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope = "row">{{item.product_id_plu}}</th>
+        <th> {{item.product_name}}</th>
+        <td><button ng-click="eastside.addToUserCupboard(item)" class="eastsideClass" >Add</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- </div> -->
+</div>

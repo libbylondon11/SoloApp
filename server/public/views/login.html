@@ -2,42 +2,42 @@
 <html ng-app="whiteApp">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Powder Finder</title>
     <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
     <script src="vendors/angular/angular.min.js"></script>
     <script src="vendors/angular-route/angular-route.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
-
+    <script src="https://use.fontawesome.com/b1d4f15100.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="views/style.css"/>
-    <!-- <link rel="stylesheet" href="views/application.scss"/> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 </head>
-
-    <!-- <base href="/" /> -->
     <div class="top"> Bulk Spice Identifier:
   A Co-op Bulk Aisle Support App</div>
-
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <p>For those times when you buy a white colored spice in the bulk aisle and forget to write down it's name on the bag </p>
-  </div>
+  </div> -->
+  <div class = "jumbotron">
       <!-- <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px"> -->
   <body class="signinPage" ng-controller="LoginController as login">
     <form id="loginForm" action="/" method="POST">
       <div class="username">
-      <label for="username"> Username: </label>
+      <label for="username"> Username</label>
       <input type="text" name="username" id= "username" class="idk"/>
-</div>
+  </div>
     <div class="password">
-      <label for = "password"> Password: </label>
+      <label for = "password"> Password</label>
       <input type="password" name="password" id="password"/>
     </div>
-    <input type="submit" name="submitting" class="sButton"/>
-
-    <a href="/register" name="registering" class="registration">Register</a>
-     <!-- <md-button href = "/userCupboard">cupboard</md-button> -->
+    <!-- <input type="submit" name="submitting" class="sButton"/> -->
+    <input type="submit" a class ="btn btn-custom btn-xs" role = "button"></a>
+    <a class ="btn btn-custom btn-xs" href="/register" role = "button">Register</a>
   </div>
   </form>
-
+</div>
 </body>
   <footer> Created by Libby London, Minneapolis, MN 2016 </footer>
 <html>
