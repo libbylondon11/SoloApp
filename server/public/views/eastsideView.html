@@ -16,24 +16,21 @@
 </div>  -->
 
 <div class="eastsideTitle">
+  <table class = "table">
   <!-- <div class="displayEastside"> -->
-<div ng-repeat="item in eastside.coopArray">
-<table class = "table">
   <thead>
-    <tr>
       <th>PLU Number </th>
       <th> Spice Name </th>
       <th> Add to your cupboard?</th>
-    </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope = "row">{{item.product_id_plu}}</th>
-        <th> {{item.product_name}}</th>
-        <td><button ng-click="eastside.addToUserCupboard(item)" class="eastsideClass" >Add</button></td>
+    <tr ng-repeat="item in eastside.coopArray">
+        <td>{{item.product_id_plu}}</td>
+        <td> {{item.product_name}}</td>
+        <td><button ng-click="eastside.addToUserCupboard(item)" class="eastsideClass">Add</button></td>
       </tr>
     </tbody>
+  </div>
   </table>
-</div>
+
 <!-- </div> -->
-</div>
