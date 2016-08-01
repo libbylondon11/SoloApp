@@ -14,8 +14,8 @@
 // $mainColor:
 $primaryColor: #661b24;
 $cupboardColor: #9e7937;
-$font:'Timber', sans-sefif;
-$secondFont:'Bookman Old Style', sans-serif;
+$font:'Timber', sans-serif;
+$secondFont:'Roboto', sans-serif;
 $mobile: new-breakpoint(max-width 490px 4);
 
 // @import "scss/brian";
@@ -43,7 +43,7 @@ $mobile: new-breakpoint(max-width 490px 4);
 }
 
 input[type=text] {
-  background-color: #87a296;
+  // background-color: #87a296;
   font-size: 60px;
   font-family: $font;
   font-color: $cupboardColor;
@@ -53,7 +53,7 @@ input[type=text] {
 }
 
 input[type=password]{
-  background-color: #87a296;
+  // background-color: #87a296;
   font-size: 60px;
   font-family: $font;
   font-color: $cupboardColor;
@@ -138,12 +138,15 @@ p {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Palatino Linotype';
+  font-family: 'Open Sans';
   font-color: #3f3c3a
   // color: $primaryColor;
 }
 .jumbotron {
-  display: center;
+  text-align: center;
+}
+.jumbotron h2 p {
+  text-align: center;
 }
 .signinPage {
   background: url(WhitePowderBagOp.psd.svg) repeat center center fixed;
@@ -178,6 +181,27 @@ img {
   display: center;
   opacity: 0.5%;
 
+}
+
+.btn-custom {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+  border-color: #789576;
+  background-color: #789576;
+  letter-spacing: .8px;
+  /*padding-top: 3%;
+  padding-bottom: 3%;*/
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.btn-custom:hover {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+  border-color: #5a6d58;
+  background-color: #5a6d58;
+  letter-spacing: .8px;
 }
 .E {
 // @include span-columns(6);
@@ -263,4 +287,9 @@ float: right; width: 33%; height: 60px;
 }
 footer {
   text-align: center;
+}
+thead {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
 }
