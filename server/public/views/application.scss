@@ -27,14 +27,7 @@ $mobile: new-breakpoint(max-width 490px 4);
   text-align: center;
   padding-top: 10px;
 }
-// .search {
-//   font-size: 30px;
-//   font-family: $font;
-//   font-color: #3f3c3a;
-//   float: right;
-//   text-align: right;
-//
-// }
+
 .select {
   font-size: 25px;
   font-style: $font;
@@ -88,32 +81,28 @@ a {
   font-color: none;
 }
 .deleteB {
-  font-family: $font;
-  font-color: $primaryColor;
-  font-size: 14px;
-  background-color: #661b24;
+  font-family: $secondfont;
+  font-size: 11px;
 }
 .wedgeClass {
-  font-family: $font;
   border-radius: 10px;
-  font-color: $primaryColor;
-  font-size: 10px;
+  font-family: $secondfont;
+  font-size: 11px;
   background-color: #87a296;
   text-align: center;
+
 }
 .eastsideClass {
   border-radius: 10px;
-  font-family: $font;
-  font-color: $primaryColor;
-  font-size: 12px;
+  font-family: $secondfont;
+  font-size: 11px;
   background-color: #87a296;
   text-align: center;
 }
 .sewardClass {
   border-radius: 10px;
-  font-family: $font;
-  font-color: $primaryColor;
-  font-size: 12px;
+  font-family: $secondfont;
+  font-size: 11px;
   background-color: #87a296;
   text-align: center;
 }
@@ -167,14 +156,7 @@ body {
   font-family: $font;
   font-color: $primaryColor;
 }
-.container {
-  // background: url(talcum-white-large.jpg) repeat center center fixed;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
 
-}
 img {
   // padding: 10px;
   // margin: 5px;
@@ -210,8 +192,6 @@ font-color: #3f3c3a;
 font-family: $font;
 float: right; width: 20%; height: 70px;
 
-// @include span-columns(10);
-
   }
 .S {
 // @include span-columns(6);
@@ -221,8 +201,6 @@ font-family: $font;
 // float: left; width: 50%;
 float: right; width: 20%; height: 50px;
 }
-// @include span-columns(10);
-
 
 .W {
 // @include span-columns(6);
