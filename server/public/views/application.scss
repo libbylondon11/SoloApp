@@ -168,11 +168,11 @@ body {
   font-color: $primaryColor;
 }
 .container {
-  background: url(talcum-white-large.jpg) repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // background: url(talcum-white-large.jpg) repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
 }
 img {
@@ -234,13 +234,10 @@ float: right; width: 33%; height: 60px;
 
 }
 .cupboard {
-
   font-family: $font;
   font-size: 20px;
   font-color: #3f3c3a;
-  // float: right; width: 33%; height: 60px;
-
-    }
+  }
 .logout {
   font-family: $font;
   font-size: 20px;
@@ -254,37 +251,35 @@ float: right; width: 33%; height: 60px;
   // float: right; width: 20%; height: 70px;
 }
 .eastsideTitle {
-  font-size: 13px;
+  font-family: $secondFont;
   text-align: center;
 
 }
 .wedgeTitle {
-  font-size: 13px;
+  font-family: $secondFont;
   text-align: center;
 }
 .sewardTitle {
-  font-size: 11px;
+  font-family: $secondFont;
   text-align: center;
 }
 .displayWedge {
-  font-size: 13px;
+  font-family: $secondFont;
   display: center;
 }
 .userArea {
-  font-size: 13px;
+  font-family: $secondFont;
   display: center;
 }
 .displayEastside {
-  font-size: 11px;
+  font-family: $secondFont;
   display: center;
 }
 .displaySeward {
-  font-size: 11px;
+  font-family: $secondFont;
   display: center;
 }
-.cupboard{
- color: blue;
-}
+
 footer {
   text-align: center;
 }
@@ -292,4 +287,17 @@ thead {
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 20px;
+}
+.btn-group{
+  float: right;
+  display: right;
+}
+.navbar navbar-default {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table {
+  font-family: $secondFont;
+  font-size: 11px;
 }

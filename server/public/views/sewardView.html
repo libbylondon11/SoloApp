@@ -1,8 +1,8 @@
-<div class="sewardTitle">
+<!-- <div class="sewardTitle">
 <div>
   {{seward.message}}
-  <!-- {{seward.coopArray}} -->
-  <div class="displaySeward">
+{{seward.coopArray}} -->
+  <!-- <div class="displaySeward">
   <div ng-repeat="item in seward.coopArray">
   PLU: {{item.product_id_plu}}
   Name: {{item.product_name}}
@@ -10,9 +10,26 @@
     <div class="button">
     <button ng-click="seward.addToUserCupboard(item)" class="sewardClass">Add to my Cupboard</button>
   </div>
-  <!-- {{seward.data.product_name}} -->
+  <{{seward.data.product_name}} -->
   <!-- {{seward.response.data}} -->
+<!-- </div>
 </div>
-</div>
-</div>
-    </div>
+</div> -->
+    <!-- </div> -->
+    <div class="sewardTitle">
+      <table class = "table">
+      <!-- <div class="displayEastside"> -->
+      <thead>
+          <th>PLU Number</th>
+          <th>Spice Name</th>
+          <th>Add to your cupboard?</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in seward.coopArray">
+            <td>{{item.product_id_plu}}</td>
+            <td> {{item.product_name}}</td>
+            <td><button ng-click="seward.addToUserCupboard(item)" class="sewardClass">Add</button></td>
+          </tr>
+        </tbody>
+      </div>
+      </table>

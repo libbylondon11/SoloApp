@@ -1,8 +1,30 @@
 <div class="wedgeTitle">
+  <table class = "table">
+  <!-- <div class="displayEastside"> -->
+  <thead>
+      <th>PLU Number </th>
+      <th> Spice Name </th>
+      <th> Add to your cupboard?</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in wedge.coopArray">
+        <td>{{item.product_id_plu}}</td>
+        <td> {{item.product_name}}</td>
+        <td><button ng-click="wedge.addToUserCupboard(item)" class="wedgeClass">Add</button></td>
+      </tr>
+    </tbody>
+  </div>
+  </table>
+
+
+
+
+<!--
+<div class="wedgeTitle">
 <div>
   {{wedge.message}}
-  <!-- {{seward.coopArray}} -->
-  <div class="displayWedge">
+  {{seward.coopArray}} -->
+  <!-- <div class="displayWedge">
   <div ng-repeat="item in wedge.coopArray">
     <br>PLU: {{item.product_id_plu}}
     <br>Name: {{item.product_name}}
@@ -10,10 +32,10 @@
     <div class="button">
     <button ng-click="wedge.addToUserCupboard(item)"class="wedgeClass">Add to my Cupboard</button>
   </div>
-  <!-- {{seward.data.product_name}} -->
+{{seward.data.product_name}} -->
   <!-- {{seward.response.data}} -->
 
-</div>
+<!-- </div>
 </div>
   </div>
-</div>
+</div> -->

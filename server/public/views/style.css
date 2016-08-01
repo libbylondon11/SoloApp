@@ -138,13 +138,6 @@ body {
   font-family: "Timber", sans-serif;
   font-color: #661b24; }
 
-.container {
-  background: url(talcum-white-large.jpg) repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 img {
   display: center;
   opacity: 0.5%; }
@@ -209,35 +202,32 @@ img {
   font-color: #3f3c3a; }
 
 .eastsideTitle {
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
   text-align: center; }
 
 .wedgeTitle {
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
   text-align: center; }
 
 .sewardTitle {
-  font-size: 11px;
+  font-family: "Roboto", sans-serif;
   text-align: center; }
 
 .displayWedge {
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
   display: center; }
 
 .userArea {
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
   display: center; }
 
 .displayEastside {
-  font-size: 11px;
+  font-family: "Roboto", sans-serif;
   display: center; }
 
 .displaySeward {
-  font-size: 11px;
+  font-family: "Roboto", sans-serif;
   display: center; }
-
-.cupboard {
-  color: blue; }
 
 footer {
   text-align: center; }
@@ -246,5 +236,18 @@ thead {
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 20px; }
+
+.btn-group {
+  float: right;
+  display: right; }
+
+.navbar navbar-default {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.table {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px; }
 
 /*# sourceMappingURL=style.css.map */

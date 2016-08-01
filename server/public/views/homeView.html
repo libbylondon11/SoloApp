@@ -14,6 +14,11 @@
     <base href="/"/>
   </head>
       <body class="container" ng-controller="HomeController as home">
+           <div class="btn-group">
+               <a class ="btn btn-default navbar-btn" href="/">Home</a>
+                <a class ="btn btn-default navbar-btn" href="/userCupboard">My Cupboard</a>
+                <a class ="btn btn-default navbar-btn" href="/logout" role = "button"> Log Out</a>
+            </div>
       <div class="jumbotron">
         <h2> Bulk Spice Identifier: A Co-op Bulk Aisle Support App</h2>
         <p> Which white spice are you searching for today? Select your co-op below: </p>
@@ -22,30 +27,14 @@
   <nav class="navbar navbar-default">
      <div class="container-fluid">
        <div class="navbar-header">
-         <a class ="btn btn-default navbar-btn" href="/">Home</a>
-          <a class ="btn btn-default navbar-btn" href="/userCupboard">My Cupboard</a>
-          <a class ="btn btn-default navbar-btn" href="/logout" role = "button"> Log Out</a>
           <a class ="btn btn-default navbar-bth" href="/eastsideView" role = "button"> Eastside</a>
           <a class ="btn btn-default navbar-btn" href="/sewardView" role="button">Seward</a>
           <a class ="btn btn-default navbar-btn" href="/wedgeView" role = "button"> Wedge</a>
         </div>
       </div>
   </nav>
+  </div>
 
-    <!-- <div class="container">
-      <div class = "row">
-          <div class = "col-xs-4">
-            <a class ="btn btn-custom btn-xs" href="/eastsideView" role = "button">Eastside</a>
-          </div>
-          <div class = "col-xs-4">
-            <a class ="btn btn-custom btn-xs" href="/sewardView" role="button">Seward</a>
-          </div>
-          <div class = "col-xs-4">
-            <a class ="btn btn-custom btn-xs" href="/wedgeView" role="button">Wedge</a>
-          </div>
-        </div>
-      </div> -->
-    </div>
   <div ng-view>
   </div>
   </body>
