@@ -119,11 +119,13 @@ p {
   font-family: 'Open Sans';
   font-color: #3f3c3a; }
 
-.jumbotron {
-  text-align: center; }
+.jumbotron h2 {
+  text-align: center;
+  font-family: "Timber", sans-serif; }
 
 .jumbotron h2 p {
-  text-align: center; }
+  text-align: center;
+  font-size: 45px; }
 
 .signinPage {
   background: url(WhitePowderBagOp.psd.svg) repeat center center fixed;
@@ -161,6 +163,24 @@ img {
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 10px;
+  border-color: #5a6d58;
+  background-color: #5a6d58;
+  letter-spacing: .8px; }
+
+.signinPage .btn-custom {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+  border-color: #789576;
+  background-color: #789576;
+  letter-spacing: .8px;
+  margin-left: 1%;
+  margin-right: 1%; }
+
+.signinPage .btn-custom:hover {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 20px;
   border-color: #5a6d58;
   background-color: #5a6d58;
   letter-spacing: .8px; }
@@ -251,6 +271,21 @@ thead {
 
 .table {
   font-family: "Roboto", sans-serif;
+  font-size: 11px; }
+
+.eastsideTitle .btn-sm {
+  float: right;
+  margin-right: 15%;
+  font-size: 11px; }
+
+.wedgeTitle .btn-sm {
+  float: right;
+  margin-right: 15%;
+  font-size: 11px; }
+
+.sewardTitle .btn-sm {
+  float: right;
+  margin-right: 15%;
   font-size: 11px; }
 
 /*# sourceMappingURL=style.css.map */

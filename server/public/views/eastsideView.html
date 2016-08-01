@@ -19,16 +19,19 @@
   <table class = "table">
   <!-- <div class="displayEastside"> -->
   <thead>
+
       <th>PLU Number </th>
+
       <th> Spice Name </th>
-      <th> Add to your cupboard?</th>
+
+      <th>Add to your cupboard?</th>
   </thead>
   <tbody>
     <tr ng-repeat="item in eastside.coopArray">
-        <td>{{item.product_id_plu}}</td>
-        <td> {{item.product_name}}</td>
-        <td><button ng-click="eastside.addToUserCupboard(item)" class="btn btn-custom btn-xs">Add</button></td>
-      </tr>
+        <th>{{item.product_id_plu}}</th>
+        <th> {{item.product_name}}</th>
+        <th><button ng-click="eastside.addToUserCupboard(item)" class="btn btn-custom btn-sm">Add</button></th>
+    </tr>
     </tbody>
   </div>
   </table>
