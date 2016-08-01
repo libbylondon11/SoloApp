@@ -18,8 +18,6 @@ $font:'Timber', sans-serif;
 $secondFont:'Roboto', sans-serif;
 $mobile: new-breakpoint(max-width 490px 4);
 
-// @import "scss/brian";
-
 .top {
   font-family: $font;
   color: $primaryColor;
@@ -27,16 +25,14 @@ $mobile: new-breakpoint(max-width 490px 4);
   text-align: center;
   padding-top: 10px;
 }
-
 .select {
   font-size: 25px;
-  font-style: $font;
+  font-family: $secondFont;
   font-color: #3f3c3a;
   text-align: center;
 }
 
 input[type=text] {
-  // background-color: #87a296;
   font-size: 60px;
   font-family: $font;
   font-color: $cupboardColor;
@@ -46,19 +42,17 @@ input[type=text] {
 }
 
 input[type=password]{
-  // background-color: #87a296;
   font-size: 60px;
   font-family: $font;
   font-color: $cupboardColor;
   width: 600px;
   height: 80px;
   text-align: center;
-
 }
 .sButton {
   border-radius: 50px;
   padding: 10px;
-  font-family: $font;
+  font-family: $secondFont;
   font-color: $primaryColor;
   font-size: 40px;
   background-color: #2d783b;
@@ -67,7 +61,7 @@ input[type=password]{
 .registration {
   border-radius: 50px;
   padding: 10px;
-  font-family: $font;
+  font-family: $secondFont;
   font-color: $primaryColor;
   font-size: 40px;
   background-color: #2d783b;
@@ -80,13 +74,24 @@ a {
   text-decoration: none;
   font-color: none;
 }
-.deleteB {
-  font-family: $secondfont;
-  font-size: 11px;
+
+.btn-custom {
+  font-family: $secondFont;
+  color: black;
+  font-size: 10px;
+  border-color: #789576;
+  background-color: #789576;
+}
+.btn-custom:hover{
+  font-family: $secondFont;
+  color: black;
+  font-size: 10px;
+  border-color: #5a6d58;
+  background-color: #5a6d58;
 }
 .wedgeClass {
   border-radius: 10px;
-  font-family: $secondfont;
+  font-family: $secondFont;
   font-size: 11px;
   background-color: #87a296;
   text-align: center;
@@ -94,14 +99,14 @@ a {
 }
 .eastsideClass {
   border-radius: 10px;
-  font-family: $secondfont;
+  font-family: $secondFont;
   font-size: 11px;
   background-color: #87a296;
   text-align: center;
 }
 .sewardClass {
   border-radius: 10px;
-  font-family: $secondfont;
+  font-family: $secondFont;
   font-size: 11px;
   background-color: #87a296;
   text-align: center;
@@ -128,8 +133,7 @@ p {
   font-weight: bold;
   text-align: center;
   font-family: 'Open Sans';
-  font-color: #3f3c3a
-  // color: $primaryColor;
+  font-color: #3f3c3a;
 }
 .jumbotron {
   text-align: center;
@@ -144,7 +148,7 @@ p {
   -o-background-size: cover;
   opacity: 0.5%;
   background-size: cover;
-  font-family: $font;
+  font-family: $secondFont;
   font-color: $primaryColor;
   background-color: rgba(160,152,146,0.3);
   // background-color: #ead8c3;
@@ -153,77 +157,65 @@ p {
   font: 10px;
 }
 body {
-  font-family: $font;
+  font-family: $secondFont;
   font-color: $primaryColor;
 }
 
 img {
-  // padding: 10px;
-  // margin: 5px;
   display: center;
   opacity: 0.5%;
-
 }
 
 .btn-custom {
   font-family: 'Open Sans', sans-serif;
   color: black;
-  font-size: 20px;
+  font-size: 10px;
   border-color: #789576;
   background-color: #789576;
   letter-spacing: .8px;
-  /*padding-top: 3%;
-  padding-bottom: 3%;*/
   margin-left: 1%;
   margin-right: 1%;
 }
 .btn-custom:hover {
   font-family: 'Open Sans', sans-serif;
   color: black;
-  font-size: 20px;
+  font-size: 10px;
   border-color: #5a6d58;
   background-color: #5a6d58;
   letter-spacing: .8px;
 }
 .E {
-// @include span-columns(6);
 font-size: 25px;
 font-color: #3f3c3a;
 font-family: $font;
 float: right; width: 20%; height: 70px;
-
-  }
+}
 .S {
-// @include span-columns(6);
 font-size: 25px;
 font-color: #3f3c3a;;
 font-family: $font;
-// float: left; width: 50%;
 float: right; width: 20%; height: 50px;
 }
 
 .W {
-// @include span-columns(6);
 font-size: 25px;
 font-color: #3f3c3a;
 font-family: $font;
 float: right; width: 33%; height: 60px;
-// @include span-columns(10);
-
 }
 .cupboard {
-  font-family: $font;
+  font-family: $secondFont;
   font-size: 20px;
   font-color: #3f3c3a;
   }
 .logout {
-  font-family: $font;
+  font-family: $secondFont;
   font-size: 20px;
   // float: right; width: 20%; height: 50px;
   font-color: #3f3c3a;
 }
 .home {
-  font-family: $font;
+  font-family: $secondFont;
   font-size: 20px;
   font-color: #3f3c3a;
   // float: right; width: 20%; height: 70px;
